@@ -1,10 +1,19 @@
 <template>
 	<div id="app">
 		<h1>#todo</h1>
-	<Navigation/>
-		<router-view/>
+		<Navigation/>
+		<main>
+			<router-view/>
+		</main>
 	</div>
 </template>
+
+<script>
+import Navigation from "@/components/Navigation";
+export default {
+	components: { Navigation }
+}
+</script>
 
 <style scoped>
 #app {
@@ -19,9 +28,3 @@ h1 {
 	font-weight: 700;
 }
 </style>
-<script>
-import Navigation from "@/components/Navigation";
-export default {
-	components: { Navigation }
-}
-</script>
