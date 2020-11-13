@@ -3,19 +3,19 @@
 		<div class="nav-element">
 			<router-link class="nav-link" to="/">
 				All
-				<div class="rectangle"></div>
+				<div class="rectangle" v-if="getUrl() == '/'"></div>
 			</router-link>
 		</div>
 		<div class="nav-element">
 			<router-link class="nav-link" to="/active">
 				Active
-				<div class="rectangle"></div>
+				<div class="rectangle" v-if="getUrl() == '/active'"></div>
 			</router-link>
 		</div>
 		<div class="nav-element">
 			<router-link class="nav-link" to="/completed">
 				Completed
-				<div class="rectangle"></div>
+				<div class="rectangle" v-if="getUrl() == '/completed'"></div>
 			</router-link>
 		</div>
 	</nav>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-	name: "Navigation"
+	name: "Navigation",
+	methods: {
+		getUrl() {
+			return this.$route.path;
+		}
+	}
 }
 </script>
 
