@@ -11,6 +11,7 @@ export default {
 	methods: {
 		addToList() {
 			let name = this.$refs.input.value.trim();
+			if (name == "") return;
 			this.$refs.input.value = "";
 			this.$store.commit("ADD_TO_LIST", name);
 		}
