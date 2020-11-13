@@ -1,5 +1,7 @@
 <template>
-	<AddButton/>
+	<article>
+		<AddButton/>
+	</article>
 </template>
 
 <script>

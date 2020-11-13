@@ -1,13 +1,20 @@
 <template>
 <div class="add-button">
-	<input type="text" placeholder="add details">
-	<button type="submit">Add</button>
+	<input ref="input" type="text" placeholder="add details" @keyup.enter="addToList">
+	<button type="submit" @click="addToList" >Add</button>
 </div>
 </template>
 
 <script>
 export default {
-	name: "AddButton"
+	name: "AddButton",
+	methods: {
+		addToList() {
+			let name = this.$refs.input.value.trim();
+			this.$refs.input.value = "";
+			this.$store.commit("ADD_TO_LIST", name);
+		}
+	}
 }
 </script>
 
