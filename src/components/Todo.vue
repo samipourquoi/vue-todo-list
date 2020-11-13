@@ -1,10 +1,12 @@
 <template>
-	<h1>test</h1>
+	<AddButton/>
 </template>
 
 <script>
+import AddButton from "@/components/AddButton";
 export default {
-	name: "Todo"
+	name: "Todo",
+	components: { AddButton }
 }
 </script>
 
