@@ -1,10 +1,16 @@
 <template>
-	<h1>active page</h1>
+	<div class="active">
+		<Todo :list="$store.state.list.filter(e => !e.checked)"/>
+	</div>
 </template>
 
 <script>
+import Todo from "@/components/Todo";
 export default {
-	name: "Active"
+	name: "Active",
+	components: {
+		Todo
+	}
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 	<li class="todo-item">
-		<input class="button" type="checkbox">
-		<span>{{ $props.name }}</span>
+		<input class="button" type="checkbox" v-model="item.checked">
+		<span>{{ item.name }}</span>
 	</li>
 </template>
 
@@ -9,8 +9,8 @@
 export default {
 	name: "Item",
 	props: {
-		name: {
-			type: String,
+		item: {
+			type: Object,
 			required: true
 		}
 	}

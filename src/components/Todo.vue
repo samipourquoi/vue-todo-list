@@ -1,8 +1,8 @@
 <template>
 	<article>
 		<AddButton/>
-		<ul v-for="item in $store.state.list" :key="item">
-			<Item :name="item"/>
+		<ul v-for="item in list" :key="item.id">
+			<Item :item="item"/>
 		</ul>
 	</article>
 </template>
@@ -12,7 +12,13 @@ import AddButton from "@/components/AddButton";
 import Item from "@/components/Item";
 export default {
 	name: "Todo",
-	components: { Item, AddButton }
+	components: { Item, AddButton },
+	props: {
+		list: {
+			type: Array,
+			required: true
+		}
+	}
 }
 </script>
 

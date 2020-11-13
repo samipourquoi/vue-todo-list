@@ -1,6 +1,6 @@
 <template>
 	<div class="all">
-		<Todo/>
+		<Todo :list="$store.state.list"/>
 	</div>
 </template>
 
