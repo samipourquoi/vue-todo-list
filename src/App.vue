@@ -1,18 +1,27 @@
 <template>
 	<div id="app">
 		<h1>#todo</h1>
-		<div id="nav">
-			<router-link to="/">All</router-link>
-			<router-link to="/active">Active</router-link>
-			<router-link to="/completed">Completed</router-link>
-		</div>
+	<Navigation/>
 		<router-view/>
 	</div>
 </template>
 
 <style scoped>
+#app {
+	padding: 0 28%;
+	box-sizing: border-box;
+}
+
 h1 {
+	color: #333333;
+	text-align: center;
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 }
 </style>
+<script>
+import Navigation from "@/components/Navigation";
+export default {
+	components: { Navigation }
+}
+</script>
