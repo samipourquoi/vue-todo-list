@@ -1,19 +1,19 @@
 <template>
 	<nav>
 		<div class="nav-element">
-			<router-link to="/" class="nav-link">
+			<router-link class="nav-link" to="/">
 				All
 				<div class="rectangle"></div>
 			</router-link>
 		</div>
 		<div class="nav-element">
-			<router-link to="/active" class="nav-link">
+			<router-link class="nav-link" to="/active">
 				Active
 				<div class="rectangle"></div>
 			</router-link>
 		</div>
 		<div class="nav-element">
-			<router-link to="/completed" class="nav-link">
+			<router-link class="nav-link" to="/completed">
 				Completed
 				<div class="rectangle"></div>
 			</router-link>

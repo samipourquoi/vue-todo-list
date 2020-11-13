@@ -1,5 +1,5 @@
 <template>
-<h2>Completed</h2>
+	<h2>Completed</h2>
 </template>
 
 <script>
