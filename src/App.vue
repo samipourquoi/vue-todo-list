@@ -1,14 +1,18 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<h1>#todo</h1>
+		<div id="nav">
+			<router-link to="/">All</router-link>
+			<router-link to="/active">Active</router-link>
+			<router-link to="/completed">Completed</router-link>
+		</div>
+		<router-view/>
+	</div>
 </template>
 
-<style>
-#app {
+<style scoped>
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
 }
 </style>

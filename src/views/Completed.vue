@@ -1,10 +1,10 @@
 <template>
-	<h1>test</h1>
+<h2>Completed</h2>
 </template>
 
 <script>
 export default {
-	name: "Todo"
+	name: "Completed"
 }
 </script>
 
