@@ -8,8 +8,8 @@ export default new Vuex.Store({
 		list: []
 	},
 	mutations: {
-		ADD_TO_LIST(name) {
-			this.state.list.push(name);
+		ADD_TO_LIST(state, name) {
+			state.list.push(name);
 		}
 	},
 	actions: {},
