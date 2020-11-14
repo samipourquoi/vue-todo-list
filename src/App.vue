@@ -12,7 +12,10 @@
 import Navigation from "@/components/Navigation";
 
 export default {
-	components: { Navigation }
+	components: { Navigation },
+	beforeCreate() {
+		this.$store.dispatch("loadFromStorage");
+	}
 }
 </script>
 

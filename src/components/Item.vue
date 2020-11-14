@@ -28,6 +28,9 @@ export default {
 			this.$store.state.list.splice(index, 1);
 			this.$destroy();
 		}
+	},
+	updated() {
+		this.$store.dispatch("saveToStorage")
 	}
 }
 </script>

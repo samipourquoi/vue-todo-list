@@ -25,6 +25,17 @@ export default new Vuex.Store({
 			}
 			context.commit("UPDATE_ID");
 			context.commit("APPEND_TO_LIST", data);
+			context.dispatch("saveToStorage");
+		},
+		saveToStorage(context) {
+			window.localStorage.setItem("list", JSON.stringify(context.state.list));
+			window.localStorage.setItem("id", context.state.id);
+		},
+		loadFromStorage(context) {
+			let list = window.localStorage.getItem("list");
+			let id = window.localStorage.getItem("id");
+			if (list) context.state.list = JSON.parse(list);
+			if (id) context.state.id = parseInt(id);
 		}
 	},
 	modules: {}

@@ -10,6 +10,7 @@ export default {
 	methods: {
 		deleteAll() {
 			this.$store.state.list = this.$store.state.list.filter(e => !e.checked);
+			this.$store.dispatch("saveToStorage")
 		}
 	}
 }
