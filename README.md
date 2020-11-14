@@ -1,24 +1,4 @@
 # todo-app
+A simple Todo list made with Vue.js. 
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Challenge from https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5.
