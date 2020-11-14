@@ -1,22 +1,25 @@
 <template>
 	<article>
-		<AddButton/>
 		<ul v-for="item in list" :key="item.id">
-			<Item :item="item"/>
+			<Item :item="item" :deletable="deletable ? 'deletable' : null"/>
 		</ul>
 	</article>
 </template>
 
 <script>
-import AddButton from "@/components/AddButton";
 import Item from "@/components/Item";
 export default {
 	name: "Todo",
-	components: { Item, AddButton },
+	components: { Item },
 	props: {
 		list: {
 			type: Array,
 			required: true
+		},
+		deletable: {
+			type: Boolean,
+			require: false,
+			default: false
 		}
 	}
 }

@@ -1,7 +1,10 @@
 <template>
 	<li class="todo-item">
 		<input class="button" type="checkbox" v-model="item.checked">
-		<span>{{ item.name }}</span>
+		<span class="name">{{ item.name }}</span>
+		<div class="image" v-if="deletable">
+			<img @click="deleteItem" src="/delete.svg" alt="delete item">
+		</div>
 	</li>
 </template>
 
@@ -12,6 +15,18 @@ export default {
 		item: {
 			type: Object,
 			required: true
+		},
+		deletable: {
+			type: Boolean,
+			require: false,
+			default: false
+		}
+	},
+	methods: {
+		deleteItem() {
+			let index = this.$store.state.list.findIndex(e => e.id == this.item.id);
+			this.$store.state.list.splice(index, 1);
+			this.$destroy();
 		}
 	}
 }
@@ -31,7 +46,8 @@ li {
 	width: 22px;
 }
 
-li span {
+.name {
+	width: 100%;
 	margin-left: 7px;
 	color: #333333;
 	font-size: 18px;
@@ -39,7 +55,25 @@ li span {
 	font-family: "Montserrat", sans-serif;
 }
 
-.button:checked + span {
+.button:checked + .name {
 	text-decoration: #333333 line-through;
 }
+
+.image {
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+.image img {
+	opacity: 25%;
+}
+
+.image img:hover {
+	cursor: pointer;
+}
+
+.image img:active {
+	transform: translateY(1px);
+}
+
 </style>
