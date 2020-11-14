@@ -18,14 +18,17 @@ export default {
 
 <style scoped>
 #app {
-	padding: 0 28%;
+	max-width: 900px;
+	margin: auto;
 	box-sizing: border-box;
 }
 
 h1 {
+	margin-top: 32px;
 	color: #333333;
 	text-align: center;
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
+	font-size: 36px;
 }
 </style>
